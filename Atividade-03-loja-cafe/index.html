@@ -1,0 +1,493 @@
+<!--
+    Atividade 3 - Layout com HTML e CSS
+    Aluno: Rafael Jeronimo Visconcini
+    Matrícula: 261072005
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grão & Cia - Loja de Café</title>
+    <style>
+        /* cores usadas na pagina toda */
+        :root {
+            --marrom: #4b2e1e;
+            --marrom-claro: #8a5a3b;
+            --creme: #fbf6ef;
+            --bege: #efe2d0;
+            --laranja: #d9822b;
+            --texto: #2e2420;
+            --branco: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            background-color: var(--creme);
+            color: var(--texto);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+            background-color: var(--marrom);
+            color: var(--branco);
+        }
+
+        .logo {
+            font-size: 26px;
+        }
+
+        .logo span {
+            color: var(--laranja);
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--laranja);
+        }
+
+        /* banner principal */
+        .banner {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: var(--bege);
+        }
+
+        .banner h2 {
+            font-size: 42px;
+            color: var(--marrom);
+            margin-bottom: 12px;
+        }
+
+        .banner p {
+            font-size: 18px;
+            color: var(--marrom-claro);
+            margin: 0 0 28px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--laranja);
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .botao:hover {
+            background-color: var(--marrom);
+        }
+
+        /* seçoes */
+        section {
+            padding: 60px 40px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            color: var(--marrom);
+            margin-bottom: 36px;
+        }
+
+        
+        .produtos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--branco);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        
+        .etiqueta {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 4px 12px;
+            background-color: var(--laranja);
+            color: var(--branco);
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+
+        .card-conteudo {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            color: var(--marrom);
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            margin: 0 0 16px;
+            color: #5a4a42;
+            flex: 1;
+        }
+
+        .card-rodape {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .preco {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--laranja);
+        }
+
+        .card-rodape a {
+            padding: 8px 16px;
+            background-color: var(--marrom);
+            color: var(--branco);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .card-rodape a:hover {
+            background-color: var(--laranja);
+        }
+
+        /* sobre */
+        #sobre {
+            background-color: var(--bege);
+        }
+
+        .sobre-conteudo {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .sobre-conteudo img {
+            width: 45%;
+            border-radius: 12px;
+        }
+
+        .sobre-conteudo p {
+            text-align: justify;
+        }
+
+        
+        #contato {
+            text-align: center;
+        }
+
+        .contatos {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .contato-item {
+            width: 250px;
+            padding: 24px;
+            background-color: var(--branco);
+            border-radius: 12px;
+            border-top: 4px solid var(--laranja);
+        }
+
+        .contato-item h3 {
+            color: var(--marrom);
+            margin-bottom: 8px;
+        }
+
+        .contato-item p {
+            margin: 0;
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 24px;
+            background-color: var(--marrom);
+            color: var(--bege);
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        
+        .topo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--laranja);
+            color: var(--branco);
+            font-size: 22px;
+            text-decoration: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        
+        @media (max-width: 900px) {
+            .produtos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sobre-conteudo {
+                flex-direction: column;
+            }
+
+            .sobre-conteudo img {
+                width: 100%;
+            }
+        }
+
+        
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 20px;
+            }
+
+            nav {
+                gap: 16px;
+            }
+
+            .banner {
+                padding: 50px 20px;
+            }
+
+            .banner h2 {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .produtos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header id="inicio">
+    <h1 class="logo">Grão <span>&</span> Cia</h1>
+    <nav>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+
+<div class="banner">
+    <h2>O melhor café, direto para sua casa</h2>
+    <p>Grãos selecionados, acessórios e muito sabor em cada xícara.</p>
+    <a href="#produtos" class="botao">Ver produtos</a>
+</div>
+
+<main>
+
+    <!-- produtos (cards) -->
+    <section id="produtos">
+        <h2>Nossos Produtos</h2>
+
+        <div class="produtos">
+
+            <div class="card">
+                <span class="etiqueta">Mais vendido</span>
+                <img src="img/cafe-graos.jpg" alt="Café em grãos">
+                <div class="card-conteudo">
+                    <h3>Café em Grãos</h3>
+                    <p>Pacote de 500g de café 100% arábica, torra média, com notas de chocolate e caramelo.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 39,90</span>
+                        <a href="#contato">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/cafe-espresso.jpg" alt="Café espresso">
+                <div class="card-conteudo">
+                    <h3>Café Moído Espresso</h3>
+                    <p>Moagem fina ideal para máquinas de espresso. Sabor intenso e encorpado.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 32,50</span>
+                        <a href="#contato">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="etiqueta">Novo</span>
+                <img src="img/prensa-francesa.jpg" alt="Prensa francesa">
+                <div class="card-conteudo">
+                    <h3>Prensa Francesa</h3>
+                    <p>Cafeteira de vidro com capacidade de 600ml. Prático e fácil de limpar.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 89,00</span>
+                        <a href="#contato">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/caneca.jpg" alt="Caneca de cerâmica">
+                <div class="card-conteudo">
+                    <h3>Caneca de Cerâmica</h3>
+                    <p>Caneca artesanal de 300ml, perfeita para o cafezinho da manhã.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 45,00</span>
+                        <a href="#contato">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="etiqueta">Promoção</span>
+                <img src="img/moedor.jpg" alt="Moedor de café">
+                <div class="card-conteudo">
+                    <h3>Moedor Manual</h3>
+                    <p>Moedor com regulagem de moagem, para deixar seu café sempre fresquinho.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 119,90</span>
+                        <a href="#contato">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/kit-coado.jpg" alt="Filtro de café">
+                <div class="card-conteudo">
+                    <h3>Kit Coado</h3>
+                    <p>Suporte de porcelana e 100 filtros de papel para preparar um café coado perfeito.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 59,90</span>
+                        <a href="#contato">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <section id="sobre">
+        <h2>Sobre a Grão & Cia</h2>
+        <div class="sobre-conteudo">
+            <img src="img/loja.jpg" alt="Interior da loja">
+            <div>
+                <p>
+                    A <strong>Grão & Cia</strong> nasceu da paixão por café. Trabalhamos com
+                    pequenos produtores do interior de Minas Gerais e São Paulo, escolhendo
+                    os melhores grãos para chegar fresquinhos até você.
+                </p>
+                <p>
+                    Além do café, oferecemos acessórios para quem quer preparar uma bebida
+                    de qualidade em casa, do jeito que preferir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="contatos">
+            <div class="contato-item">
+                <h3>Telefone</h3>
+                <p>(11) 4002-8922</p>
+            </div>
+            <div class="contato-item">
+                <h3>E-mail</h3>
+                <p>contato@graoecia.com</p>
+            </div>
+            <div class="contato-item">
+                <h3>Endereço</h3>
+                <p>Rua do Café, 123 - Centro</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Grão & Cia &copy; 2026 - Todos os direitos reservados</p>
+    <p>Atividade 3 - Desenvolvimento Web</p>
+</footer>
+
+
+
+</body>
+</html>
+
+
+/* só pra ver se o pages funciona */

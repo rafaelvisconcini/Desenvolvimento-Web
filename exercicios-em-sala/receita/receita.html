@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bolo de Cenoura com Cobertura de Chocolate</title>
+    <link rel="shortcut icon" href="ganhadores_fncs.webp">
+    <style>
+        :root {
+            --laranja: #e8742a;
+            --laranja-escuro: #b8541a;
+            --chocolate: #5a3825;
+            --creme: #fff8f0;
+            --texto: #3b2f2a;
+            --texto-suave: #7a6a60;
+            --verde: #4f7a3a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 32px 16px;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            border: none;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.3;
+        }
+
+        header, main, #footer {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .categoria {
+            margin: 0 0 8px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--laranja-escuro);
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            color: var(--chocolate);
+            margin-bottom: 8px;
+        }
+
+        header h1 span {
+            color: var(--laranja);
+        }
+
+        .subtitulo {
+            margin: 0 0 28px;
+            font-style: italic;
+            color: var(--texto-suave);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        nav a {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 0.95rem;
+            color: var(--chocolate);
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: var(--laranja);
+            text-decoration: underline;
+        }
+
+        /* Seções */
+        main > section {
+            margin-bottom: 48px;
+        }
+
+        main p {
+            margin: 0;
+        }
+
+        main h2 {
+            font-size: 1.6rem;
+            color: var(--laranja-escuro);
+            margin-bottom: 20px;
+        }
+
+        main h3 {
+            font-size: 1.15rem;
+            color: var(--verde);
+            margin: 28px 0 12px;
+        }
+
+        main h2 + h3,
+        main h2 + section h3 {
+            margin-top: 0;
+        }
+
+        #cobertura {
+            color: inherit;
+        }
+
+        #cobertura h3 {
+            color: var(--chocolate);
+        }
+
+        .intro {
+            font-size: 1.05rem;
+        }
+
+        /* Listas */
+        ul, ol {
+            margin: 0;
+            padding-left: 24px;
+        }
+
+        ul {
+            list-style-type: "🥕  ";
+        }
+
+        #utensilios ul {
+            list-style-type: "🍴  ";
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        ol li::marker {
+            font-weight: bold;
+            color: var(--laranja);
+        }
+
+        /* Mídia */
+        #midia a {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--laranja-escuro);
+            font-weight: bold;
+        }
+
+        #midia a:hover {
+            color: var(--laranja);
+        }
+
+        .midia-item {
+            margin-top: 20px;
+        }
+
+        .midia-item p {
+            margin-bottom: 8px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 0.9rem;
+            color: var(--texto-suave);
+        }
+
+        audio, video {
+            display: block;
+            width: 100%;
+        }
+
+        /* Rodapé */
+        #footer {
+            color: var(--texto-suave);
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px 0 8px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        footer a {
+            color: var(--laranja-escuro);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <p class="categoria">Receita da casa</p>
+    <h1>Bolo de <span>Cenoura</span></h1>
+    <p class="subtitulo">Fofinho, feito no liquidificador e com cobertura cremosa de chocolate</p>
+    <nav>
+        <a href="#ingredientes">Ingredientes</a>
+        <a href="#utensilios">Utensílios</a>
+        <a href="#mododepreparo">Modo de preparo</a>
+        <a href="#midia">Mídia</a>
+    </nav>
+</header>
+
+<main>
+<section class="intro">
+  <p>Confira essa clássica receita de bolo de cenoura simples e fácil, nossa campeã de acessos! O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma receita que conquista o coração de todos! Veja com a gente como fazer bolo de cenoura, uma receita prática, preparada com auxílio do liquidificador e perfeita para degustar com um cafezinho!</p>
+</section>
+
+<section id="ingredientes">
+<h2>Ingredientes (10 itens)</h2>
+
+<section>
+<h3>Massa</h3>
+<ul>
+    <li>1/2 xícara (chá) de óleo</li>
+    <li>4 ovos</li>
+    <li>2 e 1/2 xícaras (chá) de farinha de trigo</li>
+    <li>3 cenouras médias raladas</li>
+    <li>2 xícaras (chá) de açúcar</li>
+    <li>1 colher (sopa) de fermento em pó</li>
+</ul>
+</section>
+
+<section>
+    <div id="cobertura">
+<h3>Cobertura</h3>
+<ul>
+    <li>1 colher (sopa) de manteiga</li>
+    <li>1 xícara (chá) de açúcar</li>
+    <li>3 colheres (sopa) de chocolate em pó</li>
+    <li>1 xícara (chá) de leite</li>
+</ul>
+    </div>
+</section>
+</section>
+
+<section id="utensilios">
+<h2>Utensílios</h2>
+<ul>
+    <li>Batedeira</li>
+    <li>Liquidificador</li>
+    <li>Forma de Bolo</li>
+    <li>Prato de Sobremesa</li>
+</ul>
+</section>
+
+<section id="mododepreparo" class="mododepreparo">
+<h2>Modo de preparo</h2>
+
+<h3>Massa</h3>
+<ol>
+    <li>Preaqueça o forno a 180 °C e unte a forma com manteiga e farinha.</li>
+    <li>No liquidificador, bata as cenouras, os ovos e o óleo até ficar homogêneo.</li>
+    <li>Em uma tigela, misture o açúcar e a farinha de trigo e despeje a mistura do liquidificador.</li>
+    <li>Misture bem com a batedeira e, por último, acrescente o fermento.</li>
+    <li>Coloque na forma e asse por cerca de 40 minutos.</li>
+</ol>
+
+<h3>Cobertura</h3>
+<ol>
+    <li>Em uma panela, coloque a manteiga, o açúcar, o chocolate em pó e o leite.</li>
+    <li>Leve ao fogo baixo, mexendo sempre, até engrossar.</li>
+    <li>Despeje a cobertura ainda quente sobre o bolo.</li>
+</ol>
+</section>
+
+<section id="midia">
+<h2>Mídia</h2>
+<a href="https://www.tudogostoso.com.br/receita/23-bolo-de-cenoura.html" target="_blank">Veja a receita completa no TudoGostoso</a>
+
+<div class="midia-item">
+    <p>Música para acompanhar o preparo</p>
+    <audio controls>
+        <source src="ice_and_mud.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<div class="midia-item">
+    <p>Vídeo do preparo</p>
+    <video controls>
+        <source src="bolo_video.mp4" type="video/mp4">
+    </video>
+</div>
+</section>
+</main>
+
+<div id="footer">
+<footer>
+    <p>Receita de Bolo de Cenoura &copy; 2026 - Rafael Visconcini</p>
+    <p>Fonte: <a href="https://www.tudogostoso.com.br" target="_blank">TudoGostoso</a></p>
+</footer>
+</div>
+
+</body>
+</html>

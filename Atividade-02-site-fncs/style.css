@@ -1,0 +1,149 @@
+
+
+/* cor de fundo, texto e fonte da pagina inteira */
+body {
+    background-color: #0f1535;
+    color: #e8ecff;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 20px;
+}
+
+
+h1, h2, h3 {
+    font-family: "Bebas Neue", Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+/* titulo principal */
+h1 {
+    font-size: 50px;
+    color: #ffd23f;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 #7b2cbf;
+}
+
+h2 {
+    font-size: 34px;
+    color: #4cc9f0;
+}
+
+h3 {
+    font-size: 24px;
+    color: #c77dff;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* efeito hover e os links */
+a {
+    color: #4cc9f0;
+}
+
+a:hover {
+    color: #ffd23f;
+}
+
+
+
+
+nav {
+    text-align: center;
+}
+
+/* descendencia */
+nav a {
+    margin: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+#oque, #como, #global, #curiosidades, #video,
+#requisitos, #passos, #dicas {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #4cc9f0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);  
+}
+
+
+
+
+.chamada {
+    text-align: center;
+    font-style: italic;
+    color: #c77dff;
+}
+
+.destaque {
+    font-style: italic;
+    color: #ffd23f;
+}
+
+.foto {
+    width: 50%;
+    border: 3px solid #c77dff;
+}
+
+
+
+h2 + p {
+    font-weight: bold;
+}
+
+
+ul > li, ol > li {
+    margin-bottom: 8px;
+}
+
+
+
+.lista-pontos {
+    list-style-type: "🎯 ";
+}
+
+
+.lista-etapas {
+    list-style-type: upper-roman;
+}
+
+
+.lista-curiosidades {
+    list-style-type: square;
+}
+
+
+
+
+table {
+    border: 2px solid #4cc9f0;
+}
+
+th, td {
+    padding: 8px 15px;
+    border: 1px solid #4cc9f0;
+}
+
+th {
+    color: #ffd23f;
+}
+
+
+
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #8f9bd6;
+}

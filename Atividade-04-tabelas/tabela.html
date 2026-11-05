@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        table, th, td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 5px;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 5px;
+            
+        }
+        .cabecalho {
+            background-color: #b9d5f8;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Trajetória Acadêmica e Profissional</caption>
+        <tr class="cabecalho">
+            <th rowspan="2" width="20%">Estudante</th>
+            <th colspan="2">Formação</th>
+            <th rowspan="2">Ano de conclusão</th>
+        </tr>
+        <tr class="cabecalho">
+            <th>Graduação</th>
+            <th>Pós-Graduação</th>
+        </tr>
+        <tr class="items">
+            <th>José</th>
+            <td>Ciência da Computação</td>
+            <td>Inteligência Artificial</td>
+            <td>2023</td>
+        </tr>
+        <tr class="items">
+            <th>Ana</th>
+            <td>Engenharia de Software</td>
+            <td>Gestão de Projetos</td>
+            <td>2022</td>
+        </tr>
+    </table>
+</body>
+</html>

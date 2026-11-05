@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            border: 2px solid;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .static {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 255, 0, 0.3);
+        }
+
+        .relative{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 0, 0, 0.3);
+            position: relative;
+            top: 15px;
+            left: 15px;
+        }
+
+        .absolute {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 0, 255, 0.5);
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            z-index: 3;
+        }
+
+        .fixed {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 0, 0.5);
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .sticky {
+            height: 40px;
+            background-color: rgba(255, 255, 0, 0.8);
+            position: sticky;
+            top: 0;
+        }
+
+        .static, .relative, .absolute, .fixed, .sticky {
+            font-weight: bold;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sticky">sticky</div>
+
+    <div class="container">
+        <div class="static">static</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="relative">relative</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="absolute">absolute</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+    </div>
+
+    <div class="fixed">fixed</div>
+
+</body>
+</html>
